@@ -1,0 +1,33 @@
+﻿@model CommanLayer.Model.Students
+@{
+}
+<div class="row">
+    <div class="col-6 offset-3">
+        <form method="post" asp-action="Create">
+            <div class="form-group ">
+                <label asp-for="name"></label>
+                <input asp-for="name" class=" form-control" />
+            </div>
+            <div class="form-group ">
+                <label asp-for="email"></label>
+                <input asp-for="email" class=" form-control" />
+            </div>
+            <div class="form-group ">
+                <label asp-for="mobile"></label>
+                <input asp-for="mobile" class=" form-control" />
+            </div>
+            <div class="form-group ">
+                <label asp-for="Gender"></label>
+                <input asp-for="Gender" class=" form-control" />
+            </div>
+            <div class="form-group ">
+                <label asp-for="Address"></label>
+                <input asp-for="Address" class=" form-control" />
+            </div>
+            <div class="form-group ">
+              <button type ="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+
+    </div>
+</div>

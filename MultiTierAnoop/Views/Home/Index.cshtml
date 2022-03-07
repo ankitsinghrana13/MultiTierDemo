@@ -1,0 +1,41 @@
+﻿@model IEnumerable<CommanLayer.Model.Students>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="table table-bordered">
+    <h3 class="display-4">Students Database</h3>
+
+    <a class ="btn btn-outline-primary" asp-action="Create" asp-controller="Home">Create</a>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>email</th>
+            <th>mobile</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+
+
+        @foreach (var customer in Model)
+        {
+            
+            <tr>
+                <td>@customer.ID</td>
+                <td>@customer.name</td>
+                <td>@customer.email</td>
+                <td>@customer.mobile</td>
+                <td>@customer.Gender</td>
+                <td>@customer.Address</td>
+                <td>
+                    <a class=" btn btn-danger"  asp-action="Delete"asp-controller="Home" asp-route-id="@customer.ID">Delete</a>
+                    <a class=" btn btn-warning" asp-action="Update" asp-controller="Home" asp-route-id="@customer.ID">Edit</a> 
+                </td>
+
+            </tr>
+        }
+    </table>
+       
+</div>
